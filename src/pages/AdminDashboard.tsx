@@ -185,11 +185,15 @@ const AdminDashboard = () => {
         </div>
 
         <Tabs defaultValue="applications" className="w-full">
-          <TabsList className="mb-6">
+          <TabsList className="mb-6 flex-wrap">
             <TabsTrigger value="applications">Applications</TabsTrigger>
             <TabsTrigger value="messages">Messages</TabsTrigger>
             <TabsTrigger value="events">Events</TabsTrigger>
             <TabsTrigger value="newsletter">Newsletter</TabsTrigger>
+            <TabsTrigger value="courses">Courses</TabsTrigger>
+            <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
+            <TabsTrigger value="forum">Forum</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 
           <TabsContent value="applications" className="space-y-4">
@@ -297,6 +301,34 @@ const AdminDashboard = () => {
                 No messages yet
               </Card>
             )}
+          </TabsContent>
+
+          <TabsContent value="courses">
+            <Card className="p-12 text-center">
+              <p className="text-foreground/60 mb-4">Course management coming soon</p>
+              <Button onClick={() => navigate("/courses")}>View Courses</Button>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="marketplace">
+            <Card className="p-12 text-center">
+              <p className="text-foreground/60 mb-4">Marketplace management coming soon</p>
+              <Button onClick={() => navigate("/marketplace")}>View Marketplace</Button>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="forum">
+            <Card className="p-12 text-center">
+              <p className="text-foreground/60 mb-4">Forum management coming soon</p>
+              <Button onClick={() => navigate("/forum")}>View Forum</Button>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="analytics">
+            <Card className="p-12 text-center">
+              <p className="text-foreground/60 mb-4">View detailed analytics and reports</p>
+              <Button onClick={() => navigate("/analytics")}>View Analytics Dashboard</Button>
+            </Card>
           </TabsContent>
         </Tabs>
       </div>

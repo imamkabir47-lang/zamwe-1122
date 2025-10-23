@@ -26,6 +26,9 @@ import Messages from "./pages/Messages";
 import Forum from "./pages/Forum";
 import Courses from "./pages/Courses";
 import Marketplace from "./pages/Marketplace";
+import Blog from "./pages/Blog";
+import Bookings from "./pages/Bookings";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +57,9 @@ const App = () => (
               <Route path="/forum" element={<Forum />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/bookings" element={<Bookings />} />
+              <Route path="/analytics" element={<Analytics />} />
               <Route path="/join" element={<Join />} />
               <Route path="/login" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />

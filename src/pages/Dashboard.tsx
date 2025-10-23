@@ -104,11 +104,11 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Card
             className="p-6 hover-scale cursor-pointer animate-fade-in"
-            onClick={() => navigate("/templates")}
+            onClick={() => navigate("/courses")}
           >
-            <div className="text-3xl mb-3">📄</div>
-            <h3 className="font-semibold mb-1">My Templates</h3>
-            <p className="text-sm text-foreground/70">Manage your templates</p>
+            <div className="text-3xl mb-3">🎓</div>
+            <h3 className="font-semibold mb-1">Courses</h3>
+            <p className="text-sm text-foreground/70">Learn new skills</p>
           </Card>
           <Card
             className="p-6 hover-scale cursor-pointer animate-fade-in"
@@ -121,21 +121,57 @@ const Dashboard = () => {
           </Card>
           <Card
             className="p-6 hover-scale cursor-pointer animate-fade-in"
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/messages")}
             style={{ animationDelay: "0.2s" }}
           >
             <div className="text-3xl mb-3">💬</div>
             <h3 className="font-semibold mb-1">Messages</h3>
-            <p className="text-sm text-foreground/70">Contact support</p>
+            <p className="text-sm text-foreground/70">Chat with members</p>
           </Card>
           <Card
             className="p-6 hover-scale cursor-pointer animate-fade-in"
-            onClick={() => navigate("/builder")}
+            onClick={() => navigate("/bookings")}
             style={{ animationDelay: "0.3s" }}
           >
-            <div className="text-3xl mb-3">🏗️</div>
-            <h3 className="font-semibold mb-1">Builder</h3>
-            <p className="text-sm text-foreground/70">Create new template</p>
+            <div className="text-3xl mb-3">📆</div>
+            <h3 className="font-semibold mb-1">Bookings</h3>
+            <p className="text-sm text-foreground/70">Schedule sessions</p>
+          </Card>
+          <Card
+            className="p-6 hover-scale cursor-pointer animate-fade-in"
+            onClick={() => navigate("/marketplace")}
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="text-3xl mb-3">🛍️</div>
+            <h3 className="font-semibold mb-1">Marketplace</h3>
+            <p className="text-sm text-foreground/70">Buy & sell products</p>
+          </Card>
+          <Card
+            className="p-6 hover-scale cursor-pointer animate-fade-in"
+            onClick={() => navigate("/forum")}
+            style={{ animationDelay: "0.5s" }}
+          >
+            <div className="text-3xl mb-3">💭</div>
+            <h3 className="font-semibold mb-1">Forum</h3>
+            <p className="text-sm text-foreground/70">Join discussions</p>
+          </Card>
+          <Card
+            className="p-6 hover-scale cursor-pointer animate-fade-in"
+            onClick={() => navigate("/resources")}
+            style={{ animationDelay: "0.6s" }}
+          >
+            <div className="text-3xl mb-3">📚</div>
+            <h3 className="font-semibold mb-1">Resources</h3>
+            <p className="text-sm text-foreground/70">Download materials</p>
+          </Card>
+          <Card
+            className="p-6 hover-scale cursor-pointer animate-fade-in"
+            onClick={() => navigate("/videos")}
+            style={{ animationDelay: "0.7s" }}
+          >
+            <div className="text-3xl mb-3">🎥</div>
+            <h3 className="font-semibold mb-1">Videos</h3>
+            <p className="text-sm text-foreground/70">Watch tutorials</p>
           </Card>
         </div>
 
@@ -153,9 +189,13 @@ const Dashboard = () => {
                 {new Date(user?.created_at || "").toLocaleDateString()}
               </span>
             </div>
+            <div className="flex justify-between py-2 border-b">
+              <span className="text-foreground/60">Business:</span>
+              <span className="font-medium">{profile?.business_name || "Not set"}</span>
+            </div>
             <div className="flex justify-between py-2">
-              <span className="text-foreground/60">Templates Limit:</span>
-              <span className="font-medium">5 (Free Member)</span>
+              <span className="text-foreground/60">Business Type:</span>
+              <span className="font-medium">{profile?.business_type || "Not set"}</span>
             </div>
           </div>
         </Card>

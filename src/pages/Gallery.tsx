@@ -14,12 +14,14 @@ import zamweTradeshow from "@/assets/events/zamwe-tradeshow.jpeg";
 import kidsCarnival from "@/assets/posters/kids-carnival.jpeg";
 import meetGreet from "@/assets/posters/meet-and-greet.jpeg";
 import tradeshowPoster from "@/assets/posters/tradeshow-poster.jpeg";
+import womenEntrepreneurs from "@/assets/WhatsApp Image 2025-10-22 at 6.27.12 AM.jpeg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [filter, setFilter] = useState<string>("all");
 
   const images = [
+    { src: womenEntrepreneurs, category: "members", title: "Women Entrepreneurs Hub 2022" },
     { src: zamweTradeshow, category: "events", title: "ZAMWE Tradeshow 0.3" },
     { src: turbaning, category: "events", title: "Turbaning Ceremony" },
     { src: government, category: "events", title: "Government Meeting" },
